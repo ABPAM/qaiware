@@ -12,3 +12,6 @@ II. „На сухо“, без docker контйнеризация
 ## Тестове
 
 Тъй като задачата е разработвана в Docker контейнер, тестовете (колкото и непълни да са) се изпълняват в headless браузър и минават веднъж. Ако не се използва Docker, karma.js трябва да работи с настройките си по подразбиране, а именно ред 51-ви от `karma.conf.js` да се промени на `browsers: ['Chrome'],`, 52-ри - на `singleRun: false,`, а при желание, може да се изчисти и секцията `customLaunchers` от 6-ти до 16-ти ред.
+
+### Брой последни стъпки
+HistoryComponent по условие трябва да показва последните Х действия и „Х“ трябва да е „compile time configurable value“. За целта има дефинирана `environment` променлива `history_steps` за `dev` и за `production` средите, съответно в `project/src/environments/environment.ts` и `environment.prod.ts`.
