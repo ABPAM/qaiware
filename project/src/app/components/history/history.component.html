@@ -1,0 +1,5 @@
+<div style="overflow: auto; max-height: auto; ">
+    <ul>
+        <li *ngFor="let msg of log">{{ msg.time }}: {{ getCarName(msg.car) }} was navigated from {{ getRegionName(msg.from) }} to {{ getRegionName(msg.to) }}</li>
+    </ul>
+</div>

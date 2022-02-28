@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  app:
+    build: 
+      context: '.'
+    networks:
+      - web
+    volumes:
+      - ./project:/www
+    ports:
+      - 4200:4200
+      - 9222:9222
+    container_name: QaiWare
+
+networks:
+  web:
+    external: true

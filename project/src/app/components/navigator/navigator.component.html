@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-3 p-0" *ngFor="let car of cars">
+        <div class="card mx-3 my-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ car.name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">В момента в: {{ getLocationName(car.location) }}</h6>
+                <div class="card-text mt-4">
+                    <h5>Премести в:</h5>
+                    <div class="text-left">
+                        <app-move [carId]="car.id" [currentRegion]="car.location"></app-move>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
